@@ -18,7 +18,6 @@ class BolgController < ApplicationController
 
 	def list
 		@posts = Post.all
-
 	end
 
 	def delete_post
