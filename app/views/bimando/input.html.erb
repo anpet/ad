@@ -1,0 +1,29 @@
+<div class="page-header">
+	<h1>비만도 체크</h1>
+</div>
+
+<form class="form-horizontal" action="/bimando/create" method="POST">
+	<div class="control-group">
+		<label class="control-label" for="name">이 름</label>
+		<div class="controls">
+			<input type="text" name="name" id="name" placeholder="이 름">
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="height">키</label>
+		<div class="controls">
+			<input type="text" name="height" id="height" placeholder="키 (cm)">
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="weight">몸무게</label>
+		<div class="controls">
+			<input type="text" name="weight" id="weight" placeholder="몸무게 (kg)">
+		</div>
+	</div>
+	<div class="control-group">
+		<div class="controls">
+			<button type="submit" class="btn btn btn-info">Send</button>
+		</div>
+	</div>
+</form>

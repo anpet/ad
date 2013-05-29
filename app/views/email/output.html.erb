@@ -1,2 +1,15 @@
-<h1>Email#output</h1>
-<p>Find me in app/views/email/output.html.erb</p>
+<h1>Email</h1>
+<p>전송 완료</p>	
+<div class="control-group">
+	<label class="control-label" for="name">이 름: <%=@saved.name%></label>
+	<div class="controls">
+	</div>
+</div>
+
+<div class="control-group">
+	<label class="control-label" for="email">이메일: <%=@saved.email%></label>
+	<div class="controls">
+	</div>
+</div>
+		<a href="/email/input">Add</a><br>
+		<a href="/books">back</a><br>

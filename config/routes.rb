@@ -1,4 +1,24 @@
 Addressbook::Application.routes.draw do
+  get "bolg/write"
+
+  get "bolg/write_complete"
+
+  get "bolg/list"
+
+  get "bolg/delete_post"
+
+  get "bolg/update"
+
+  get "bimando/list"
+
+  get "bimando/input"
+
+  get "bimando/create"
+
+  get "triangle/input"
+
+  get "triangle/output"
+
   get "contact/input"
 
   get "contact/output"

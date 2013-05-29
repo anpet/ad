@@ -7,5 +7,6 @@ class PhoneController < ApplicationController
 	phone.name = params[:name]
 	phone.phone = params[:phone]
 	phone.save
+	@saved = phone
 	end
 end

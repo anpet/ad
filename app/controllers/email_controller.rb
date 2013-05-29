@@ -7,5 +7,6 @@ class EmailController < ApplicationController
 		email.name = params[:name]
 		email.email = params[:email]
 		email.save
+		@saved = email
 	end
 end

@@ -1,0 +1,43 @@
+
+<% @posts.each do |x| %>
+	<h1> <%= x.username %></h1><p>
+	<%= x.content %> </p>
+	<a href="/bolg/delete_post/<%=x.id%>" role="button" class="btn btn-mini btn-danger" >삭제</a>
+	<!-- Button to trigger modal -->
+	<a href="#myModal" role="button" class="btn btn-mini" data-toggle="modal">수정</a>
+
+	<!-- Modal -->
+	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="myModalLabel"><%=x.id%>번째 게시글 수정</h3>
+		</div>
+
+		<div class="modal-body">
+			<!--rewrite-->
+
+			<form class="form-horizontal" action="/bolg/update/<%=x.id%>" method="POST">
+				<div class="control-group">
+					<label class="control-label" for="writer">작성자</label>
+					<div class="controls">
+						<input type="text" id="writer" name="writer" placeholder="작성자">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="cont">내 용</label>
+					<div class="controls">
+						<textarea rows="3" id="cont" name="cont" placeholder="내 용"></textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="controls">
+						<button type="submit" class="btn btn-inverse">Send</button>
+					</div>
+				</div>
+			</form>
+			<!--rewrite-end-->
+		</div>
+	</div>
+
+	<hr>
+<% end %>

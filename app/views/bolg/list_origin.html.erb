@@ -1,0 +1,13 @@
+
+<% @posts.each do |x| %>
+	<h1> <%= x.username %></h1><p>
+	<%= x.content %> </p>
+	<p><a href="/bolg/delete_post/<%=x.id%>">delete</a></p>
+	<form action="/bolg/update/<%=x.id%>">
+		name : <input type="text" name="writer"><br>
+		content : <input type="text" name="cont"><br>
+		<input type="submit" class="btn btn-primary" value="submit" data-loading-text="Loading..." >
+
+	</form>
+	<hr>
+<% end %>

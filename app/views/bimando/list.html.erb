@@ -1,0 +1,11 @@
+<ul>
+	<% @list.each do |l| %>
+		<h3><%= l.id %></h3>
+		<li>name : <%= l.name %></li>
+		<li>height : <%= l.height %>cm</li>
+		<li>weight : <%= l.weight %>kg</li>
+		<li>stdweight : <%= l.stdweight %>kg</li>
+		<li>bimando : <%= l.bimando %>%</li>
+		<li>state : <%= l.state %></li>
+	<% end %>
+</ul>
